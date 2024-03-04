@@ -12,13 +12,16 @@
 //****
 //***** 
 
-const response = prompt ('donne moi un nombre entre 1 et 10')
+let response = prompt('donne moi un nombre entre 1 et 10');
 
+while (response < 1 || response > 10){
+    response = prompt ('donne moi un nombre entre 1 et 10')
+}
 
-if (response<1 || response>10){
-console.log("le message devait être compris entre 1 et 10");
-}else{
-    console.log("ok");
+let stars = '*';
+for (let i = 0 ; i < response; i++) {
+    stars = stars+'*'
+    console.log (stars);
 }
 
 
