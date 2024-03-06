@@ -44,6 +44,24 @@ animals.splice(2,1,)
 
 console.log(animals);
 
+// for(..of..){} permet de parcourir les éléments d'un objet itérable (ex: tableau, string)
+
+// sur le tableau animals faire une boucle for() pour afficher tous les éléments du tableau
+
+for (let i = 0; i < animals.length; i++) {
+    console.log(animals[i]);
+}
+// sur le tableau animals faire une boucle for(...of...) pour afficher tous les éléments du tableau
+for (let animal of animals) {
+    console.log(animal);
+}
+
+// forEach(){} est une méthode javascript qui permet d'itérer sur les éléments d'un tableau
+
+animals.forEach(function(animal){
+    console.log(animal);
+});
+
 // Declarer un tableau contenant (Paris, Berlin, Rome, Moscou, Londres, Madrid)
 
 /*
@@ -57,17 +75,26 @@ Créer une fonction qui prend en parametre un tableau :
 */
 
 const capital = ["Paris", "Berlin", "Rome", "Moscou", "Londres", "Madrid"];
+// const modifyArray = () => {
+//     capital.pop()
+//     capital.unshift('Vienne')
+//     capital.splice(3,2, 'Alger')
+//     console.log (capital)  
+// };
 
-response = capital.pop ();
-console.log(response);
+// modifyArray(capital);
 
-capital.unshift('Vienne')
-console.log (capital)
+// console.log (capital)
 
-capital.splice(3,1,'Alger')
-console.log(capital);
+const modifyArray = (array) => {
+    array.pop()
+    array.unshift('Vienne')
+    array.splice(3,1, 'Alger')
+   
+    return array.length
 
-capital.size
-console.log(capital)
+};
+
+const capitalLength = modifyArray(capital)
 
 
